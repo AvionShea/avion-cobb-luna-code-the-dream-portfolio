@@ -9,8 +9,8 @@ body {
   padding: 0;
   font-family: "TASA Orbiter", sans-serif;
   text-align: center;
-  background-color: rgb(113, 58, 163);
-  color: blanchedalmond;
+  background-color: #580f41;
+  color: #580f41;
 }
 
 section {
@@ -24,7 +24,7 @@ li {
 }
 
 section li {
-  color: black;
+  color: #3b0a2a;
   font-weight: bold;
 }
 
@@ -32,25 +32,47 @@ section h2 {
   padding-bottom: 30px;
   font-size: 30px;
   font-weight: 200;
-  color: rgb(33, 255, 181);
+  color: #d4af37;
 }
 
 a {
-  color: rgb(33, 255, 181);
+  color: #c08081;
   text-decoration: none;
 }
+a:hover {
+  color: #d4af37;
+}
+a:active {
+  color: #c08081;
+}
+a:visited {
+  color: #c08081;
+}
 
-img {
-  border: 5px white solid;
+.double-text::before {
+  position: absolute;
+  content: "Avion Cobb";
+  color: #00000091;
+  transform: translate(1%, -5%);
+  z-index: -1;
+}
+
+.highlight-text {
+  color: #d4af37;
+}
+
+.framed-img {
+  padding: 30px;
+  border: 20px #d4af37 solid;
   border-radius: 50%;
-  box-shadow: 10px 0px 5px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 15px 10px 5px 1px rgba(0, 0, 0, 0.5);
 }
 
 .navbar {
   position: fixed;
   width: 100%;
   height: 50px;
-  background-color: rgb(113, 58, 163);
+  background-color: #580f41;
 }
 
 .navbar a {
@@ -58,32 +80,55 @@ img {
   float: left;
   padding: 15px;
   text-decoration: none;
+  color: #c08081;
 }
+.navbar a:hover {
+  color: #d4af37;
+}
+
 .experience {
   display: flex;
   margin-top: -50px;
 }
+
 .experience-list h2 {
-  color: black;
+  color: #3b0a2a;
 }
+
+.experience-list li {
+  list-style: disc;
+  text-align: left;
+  margin: 10px;
+  color: #3b0a2a;
+}
+
 .experience-list {
   flex: 100%;
-  background-color: #1ed7f0;
-  color: black;
+  background-color: #9f8170;
+  color: #3b0a2a;
   padding: 15px;
   margin: 18px;
-  border: 5px solid white;
+  border: 5px solid #d4af37;
 }
 
 .name {
   padding-top: 50px;
   font-size: 100px;
   font-family: "Times New Roman", Times, serif;
+  color: #d4af37;
 }
+
+.social-link,
+.social-link:visited {
+  color: #ffffff;
+}
+
 #about {
   width: 70%;
   font-size: 20px;
-  background-color: rgb(255, 17, 243);
+  background-color: #3b0a2a;
+  color: #c08081;
+  border: 2px solid #d4af37;
   border-radius: 120px;
   box-shadow: -10px 0px 5px 1px rgba(0, 0, 0, 0.5);
 }
@@ -95,27 +140,21 @@ img {
 
 .top {
   font-size: 50px;
-  color: whitesmoke;
+  color: #c08081;
 }
 
 .top a {
   text-decoration: none;
-  color: whitesmoke;
-}
-.top a:visited {
-  color: whitesmoke;
+  color: #d4af37;
 }
 
-a:visited {
-  color: black;
-}
-
-.social {
-  padding: 20px;
+.social a {
+  padding: 10px;
 }
 
 #home {
   margin-left: 20px;
   font-size: large;
   font-weight: bold;
+  color: #c08081;
 }
