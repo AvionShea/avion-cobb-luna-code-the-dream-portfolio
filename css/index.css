@@ -10,7 +10,6 @@ body {
   font-family: "TASA Orbiter", sans-serif;
   text-align: center;
   background-color: #580f41;
-  color: #580f41;
 }
 
 section {
@@ -53,7 +52,7 @@ a:visited {
   position: absolute;
   content: "Avion Cobb";
   color: #00000091;
-  transform: translate(1%, -5%);
+  transform: translate(5px, 5px);
   z-index: -1;
 }
 
@@ -109,6 +108,7 @@ a:visited {
   padding: 15px;
   margin: 18px;
   border: 5px solid #d4af37;
+  box-shadow: 10px -10px 10px 5px rgba(0, 0, 0, 0.5);
 }
 
 .name {
@@ -157,4 +157,106 @@ a:visited {
   font-size: large;
   font-weight: bold;
   color: #c08081;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .navbar {
+    width: auto;
+    height: 50px;
+  }
+
+  .navbar a {
+    font-size: 25px;
+    padding: 15px;
+    text-decoration: none;
+    color: #ffffff;
+  }
+
+  .name {
+    display: none;
+  }
+
+  .experience {
+    display: grid;
+  }
+
+  .experience-list {
+    flex: 100%;
+    background-color: #9f8170;
+    color: #3b0a2a;
+    padding: 15px;
+    margin: 18px;
+    border: 5px solid #d4af37;
+    box-shadow: 32px 10px 8px 3px rgba(36, 16, 49, 0.5);
+  }
+
+  .framed-img {
+    display: none;
+  }
+
+  .double-text::before {
+    display: none;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media (min-width: 601px) and (max-width: 767px) {
+  .navbar {
+    width: auto;
+    height: 50px;
+  }
+  .navbar a {
+    font-size: 25px;
+    padding: 15px;
+    text-decoration: none;
+    color: #d4af37;
+  }
+
+  .double-text::before {
+    display: none;
+  }
+
+  .experience {
+    display: grid;
+  }
+
+  .name {
+    display: none;
+  }
+
+  .experience-list {
+    flex: 100%;
+    background-color: #9f8170;
+    color: #3b0a2a;
+    padding: 15px;
+    margin: 18px;
+    border: 5px solid #d4af37;
+    box-shadow: 32px 10px 8px 3px rgba(36, 16, 49, 0.5);
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 1279px) {
+  .navbar a {
+    font-size: 20px;
+    padding: 15px;
+    text-decoration: none;
+    color: #d4af37;
+  }
+
+  .name {
+    padding-top: 50px;
+    font-size: 100px;
+    font-family: "Times New Roman", Times, serif;
+    color: #c08081;
+  }
+
+  .double-text::before {
+    display: none;
+  }
+
+  .experience {
+    display: grid;
+  }
 }
