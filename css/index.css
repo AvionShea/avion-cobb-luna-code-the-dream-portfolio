@@ -63,8 +63,10 @@ a:visited {
   color: #d4af37;
 }
 
-.framed-img {
+.about-me-photo {
+  height: 500px;
   padding: 30px;
+  margin-left: 50px;
   border: 20px #d4af37 solid;
   border-radius: 50%;
   box-shadow: 15px 10px 5px 1px rgba(0, 0, 0, 0.5);
@@ -99,6 +101,24 @@ a:visited {
 
 .navbar a:hover {
   color: #d4af37;
+}
+
+#about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.about-me {
+  font-size: 2rem;
+  background-color: #3b0a2a;
+  padding: 55px 25px 25px 25px;
+  color: #c08081;
+  border: 2px solid #d4af37;
+  border-radius: 120px;
+  box-shadow: -10px 0px 5px 1px rgba(0, 0, 0, 0.5);
+}
+
+.about-me-para {
+  padding: 15px;
 }
 
 .experience {
@@ -163,21 +183,6 @@ a:visited {
   color: #ffffff;
 }
 
-#about {
-  width: 70%;
-  font-size: 2rem;
-  background-color: #3b0a2a;
-  color: #c08081;
-  border: 2px solid #d4af37;
-  border-radius: 120px;
-  box-shadow: -10px 0px 5px 1px rgba(0, 0, 0, 0.5);
-}
-
-.about-me {
-  padding: 20px 0px;
-  margin-bottom: 50px;
-}
-
 .top {
   font-size: 5rem;
   color: #c08081;
@@ -234,13 +239,25 @@ a:visited {
     background: #580f41;
   }
 
-  .name {
+  .about-me-photo {
     display: none;
   }
 
+  .the-adventurer-title {
+    display: none;
+  }
   .experience {
     display: grid;
     grid-template-columns: 1fr;
+  }
+
+  #about,
+  .experience {
+    display: block;
+  }
+
+  .about-me-para {
+    width: 100%;
   }
 
   .experience-list {
@@ -276,7 +293,7 @@ a:visited {
   }
 }
 
-/* Small devices (portrait tablets and large phones, 620px and up) */
+/* Small devices (portrait tablets and large phones, 600px and up) */
 @media (min-width: 620px) and (max-width: 767px) {
   .navbar {
     width: auto;
@@ -293,8 +310,8 @@ a:visited {
     display: none;
   }
 
-  .experience {
-    display: grid;
+  .about-me-photo {
+    display: none;
   }
 
   .skills-container p {
@@ -312,23 +329,32 @@ a:visited {
     box-shadow: 10px -10px 10px 5px rgba(0, 0, 0, 0.5);
   }
 
-  .name {
+  .the-adventurer-title {
     display: none;
   }
 
+  #about,
+  .experience {
+    display: block;
+  }
+
+  .about-me-para {
+    width: 100%;
+  }
+
   .experience-list {
-    flex: 100%;
+    width: 100%;
     background-color: #9f8170;
     color: #3b0a2a;
     padding: 25px;
-    margin: 15px;
+    margin-bottom: 35px;
     border: 5px solid #d4af37;
     box-shadow: 32px 10px 8px 3px rgba(36, 16, 49, 0.5);
   }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 110px) and (max-width: 1279px) {
   .navbar a {
     font-size: 20px;
     padding: 15px;
