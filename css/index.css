@@ -354,7 +354,7 @@ a:visited {
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media (min-width: 110px) and (max-width: 1279px) {
+@media (min-width: 1100px) and (max-width: 1279px) {
   .navbar a {
     font-size: 20px;
     padding: 15px;
