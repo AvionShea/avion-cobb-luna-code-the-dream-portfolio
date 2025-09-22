@@ -136,6 +136,18 @@ a:visited {
   margin: 10px;
   color: #3b0a2a;
 }
+
+.experience-list {
+  flex: 100%;
+  background-color: #9f8170;
+  color: #3b0a2a;
+  font-size: 2rem;
+  padding: 30px;
+  margin: 15px;
+  border: 5px solid #d4af37;
+  box-shadow: 10px -10px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
 #skills li {
   font-size: 3em;
   text-align: center;
@@ -158,16 +170,6 @@ a:visited {
   margin: 15px;
   border-radius: 30px;
   border: 5px dashed #d4af37;
-  box-shadow: 10px -10px 10px 5px rgba(0, 0, 0, 0.5);
-}
-.experience-list {
-  flex: 100%;
-  background-color: #9f8170;
-  color: #3b0a2a;
-  font-size: 2rem;
-  padding: 30px;
-  margin: 15px;
-  border: 5px solid #d4af37;
   box-shadow: 10px -10px 10px 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -205,7 +207,7 @@ a:visited {
   color: #c08081;
 }
 
-/* Extra small devices (phones, 619px and down) */
+/* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 619px) {
   #hamnav {
     width: auto;
@@ -248,7 +250,21 @@ a:visited {
   }
   .experience {
     display: grid;
+  }
+
+  .skills-container p {
+    margin-top: 35px;
+  }
+
+  .skills-container {
     grid-template-columns: 1fr;
+    background-color: #3b0a2a60;
+    color: #3b0a2a;
+    font-size: 1rem;
+    padding: 30px;
+    border-radius: 30px;
+    border: 5px dashed #d4af37;
+    box-shadow: 10px -10px 10px 5px rgba(0, 0, 0, 0.5);
   }
 
   #about,
@@ -269,21 +285,6 @@ a:visited {
     box-shadow: 32px 10px 8px 3px rgba(36, 16, 49, 0.5);
   }
 
-  .skills-container p {
-    margin-top: 35px;
-  }
-
-  .skills-container {
-    grid-template-columns: 1fr;
-    background-color: #3b0a2a60;
-    color: #3b0a2a;
-    font-size: 1rem;
-    padding: 30px;
-    border-radius: 30px;
-    border: 5px dashed #d4af37;
-    box-shadow: 10px -10px 10px 5px rgba(0, 0, 0, 0.5);
-  }
-
   .framed-img {
     display: none;
   }
@@ -294,7 +295,7 @@ a:visited {
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media (min-width: 620px) and (max-width: 767px) {
+@media (min-width: 620px) and (max-width: 1099px) {
   .navbar {
     width: auto;
     height: 50px;
