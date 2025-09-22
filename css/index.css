@@ -63,15 +63,6 @@ a:visited {
   color: #d4af37;
 }
 
-.about-me-photo {
-  height: 500px;
-  padding: 30px;
-  margin-left: 50px;
-  border: 20px #d4af37 solid;
-  border-radius: 50%;
-  box-shadow: 15px 10px 5px 1px rgba(0, 0, 0, 0.5);
-}
-
 #hamnav {
   position: fixed;
   font-size: 2em;
@@ -106,12 +97,15 @@ a:visited {
 #about {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin: 0px auto;
+  width: 95%;
 }
 
 .about-me {
   font-size: 2rem;
   background-color: #3b0a2a;
   padding: 55px 25px 25px 25px;
+  margin: 30px;
   color: #c08081;
   border: 2px solid #d4af37;
   border-radius: 120px;
@@ -120,6 +114,15 @@ a:visited {
 
 .about-me-para {
   padding: 15px;
+}
+
+.about-me-photo {
+  height: 500px;
+  padding: 30px;
+  margin-top: 80px;
+  border: 20px #d4af37 solid;
+  border-radius: 50%;
+  box-shadow: 15px 10px 5px 1px rgba(0, 0, 0, 0.5);
 }
 
 .experience {
@@ -288,10 +291,6 @@ a:visited {
     box-shadow: 32px 10px 8px 3px rgba(36, 16, 49, 0.5);
   }
 
-  .framed-img {
-    display: none;
-  }
-
   .double-text::before {
     display: none;
   }
@@ -314,10 +313,7 @@ a:visited {
     color: #d4af37;
   }
 
-  .double-text::before {
-    display: none;
-  }
-
+  .double-text::before,
   .about-me-photo {
     display: none;
   }
