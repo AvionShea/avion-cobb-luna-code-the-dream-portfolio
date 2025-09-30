@@ -78,3 +78,103 @@ for (let i = 0; i < softSkill.length; i++) {
     skill.innerText = softSkill[i];
     softSkillsList.appendChild(skill);
 };
+
+// ------ MESSAGE FORM -------
+// Form selection
+const messageForm = document.querySelector("[name='leave-message']");
+
+//obtain message section
+const messageSection = document.getElementById("messages");
+
+//Hides section if empty
+function hideMessageSection() {
+    if (messageSection.querySelectorAll("li").length === 0) {
+        messageSection.style.display = "none";
+    } else {
+        messageSection.style.display = "";
+    }
+};
+
+// add submit eventListener
+messageForm.addEventListener("submit", submitForm);
+
+//Check on page load if there's a sent message
+hideMessageSection();
+
+//callback function to submit form
+function submitForm() {
+    //prevents page from refreshing
+    event.preventDefault();
+    //storing event target in a variable
+    const eventTarget = event.target;
+
+    //obtain values from HTML form
+    const userName = eventTarget.userName.value;
+    const userEmail = eventTarget.userEmail.value;
+    const userMessage = eventTarget.userMessage.value;
+
+    //console logging values
+    console.log(userName, userEmail, userMessage);
+
+    //obtain message section
+    const messageSection = document.getElementById("messages");
+    const messageList = messageSection.querySelector("ul");
+
+    //makes new list item
+    const newMessage = document.createElement("li");
+    // setting inner HTML
+    newMessage.innerHTML = `<a href=mailto:${userEmail}>${userName}</a>` + `<span>${userMessage}</span>`;
+
+    //creating remove button
+    const removeButton = document.createElement("button");
+    //setting text
+    removeButton.innerText = "remove";
+    // adding attribute type
+    removeButton.type = "button";
+
+    //adding event listener
+    removeButton.addEventListener("click", (event) => {
+        const entry = removeButton.parentNode;
+        entry.remove();
+        //checks if there's a message after remove button
+        hideMessageSection();
+    });
+
+    //adding remove button to newMessage element
+    newMessage.appendChild(removeButton);
+
+    //adding newMessage to messageList
+    messageList.appendChild(newMessage);
+
+    //resetting form once info is submitted
+    eventTarget.reset();
+
+
+    //creating edit button
+    const editButton = document.createElement("button");
+    //setting text
+    editButton.innerText = "edit";
+    // adding attribute type
+    editButton.type = "button";
+
+    //adding event listener
+    editButton.addEventListener("click", (event) => {
+        const editEntry = editButton.parentNode.querySelector("span");
+        if (editEntry.contentEditable === "true") {
+            editEntry.contentEditable = false;
+            editEntry.style.border = "";
+
+
+        } else {
+            editEntry.contentEditable = true;
+            editEntry.style.border = "3px dotted #d4af37";
+
+        }
+    });
+
+    //adding edit button to newMessage element
+    newMessage.appendChild(editButton);
+
+    //Checks if there's a message once submitted
+    hideMessageSection();
+};
