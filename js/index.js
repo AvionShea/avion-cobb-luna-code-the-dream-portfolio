@@ -158,7 +158,7 @@ function submitForm() {
     editButton.type = "button";
 
     //adding event listener
-    editButton.addEventListener("click", (event) => {
+    editButton.addEventListener("click", () => {
         const editEntry = editButton.parentNode.querySelector("span");
         if (editEntry.contentEditable === "true") {
             editEntry.contentEditable = false;
