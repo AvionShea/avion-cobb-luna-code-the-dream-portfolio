@@ -132,8 +132,8 @@ function submitForm() {
     // adding attribute type
     removeButton.type = "button";
 
-    //adding event listener
-    removeButton.addEventListener("click", (event) => {
+    //adding remove message event listener
+    removeButton.addEventListener("click", () => {
         const entry = removeButton.parentNode;
         entry.remove();
         //checks if there's a message after remove button
@@ -157,7 +157,7 @@ function submitForm() {
     // adding attribute type
     editButton.type = "button";
 
-    //adding event listener
+    //adding edit button event listener
     editButton.addEventListener("click", () => {
         const editEntry = editButton.parentNode.querySelector("span");
         if (editEntry.contentEditable === "true") {
