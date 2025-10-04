@@ -86,20 +86,8 @@ const messageForm = document.querySelector("[name='leave-message']");
 //obtain message section
 const messageSection = document.getElementById("messages");
 
-//Hides section if empty
-function hideMessageSection() {
-    if (messageSection.querySelectorAll("li").length === 0) {
-        messageSection.style.display = "none";
-    } else {
-        messageSection.style.display = "";
-    }
-};
-
 // add submit eventListener
 messageForm.addEventListener("submit", submitForm);
-
-//Check on page load if there's a sent message
-hideMessageSection();
 
 //callback function to submit form
 function submitForm() {
@@ -136,8 +124,6 @@ function submitForm() {
     removeButton.addEventListener("click", () => {
         const entry = removeButton.parentNode;
         entry.remove();
-        //checks if there's a message after remove button
-        hideMessageSection();
     });
 
     //adding remove button to newMessage element
@@ -174,7 +160,4 @@ function submitForm() {
 
     //adding edit button to newMessage element
     newMessage.appendChild(editButton);
-
-    //Checks if there's a message once submitted
-    hideMessageSection();
 };
