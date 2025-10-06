@@ -79,6 +79,37 @@ for (let i = 0; i < softSkill.length; i++) {
     softSkillsList.appendChild(skill);
 };
 
+// -------- PROJECT ---------
+// API to retrieve repos from Github
+async function getProjectsFromGithub() {
+    const gitHubUrl = "https://api.github.com/users/avionshea/repos";
+    try {
+        //send the request for info and checking if it's good
+        const response = await fetch(gitHubUrl);
+        if (!response.ok) {
+            throw new Error("Bummer! Request failed.");
+        }
+        //turning the good info into json
+        const repositories = await response.json();
+        console.log(repositories);
+
+        //Displaying repos in HTML
+        const projectList = document.querySelector(".projectList");
+
+        for (let i = 0; i < repositories.length; i++) {
+            const project = document.createElement("li");
+            project.innerHTML = `<a class="blur-text" href="${repositories[i].html_url}" target="_blank"><span>${repositories[i].name}</span></a> <span class="classified">CONFIDENTIAL</span>`;
+            projectList.appendChild(project);
+        }
+
+    } catch (error) {
+        console.error("An error occurred:", error);
+    }
+}
+
+getProjectsFromGithub();
+
+
 // ------ MESSAGE FORM -------
 // Form selection
 const messageForm = document.querySelector("[name='leave-message']");
