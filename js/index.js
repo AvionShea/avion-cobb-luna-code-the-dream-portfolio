@@ -98,7 +98,7 @@ async function getProjectsFromGithub() {
 
         for (let i = 0; i < repositories.length; i++) {
             const project = document.createElement("li");
-            project.innerHTML = `<a class="blur-text" href="${repositories[i].html_url}" target="_blank"><span>${repositories[i].name}</span></a> <span class="classified">CONFIDENTIAL</span>`;
+            project.innerHTML = `<a class="blur-text" href="${repositories[i].html_url}" target="_blank"><span>${repositories[i].name}</span></a> <span class="classified">CLASSIFIED</span>`;
             projectList.appendChild(project);
         }
 
