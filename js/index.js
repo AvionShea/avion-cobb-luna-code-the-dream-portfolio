@@ -142,7 +142,9 @@ function submitForm() {
     //makes new list item
     const newMessage = document.createElement("li");
     // setting inner HTML
-    newMessage.innerHTML = `<a href=mailto:${userEmail}>${userName}</a>` + `<span>${userMessage}</span>`;
+    newMessage.innerHTML = `<a href=mailto:${userEmail}>${userName} sent: </a>` + `<span>${userMessage}</span>`;
+
+    alert("Message sent!");
 
     //creating remove button
     const removeButton = document.createElement("button");
