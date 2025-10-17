@@ -146,4 +146,4 @@ This project is open source and available for educational purposes.
 
 ---
 
-_Built with 💻 and ☕ as part of Code the Dream_
+_Built with 💻 and 🫖 as part of Code the Dream_
