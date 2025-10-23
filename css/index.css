@@ -410,6 +410,8 @@ a:visited {
 
   .projectList li {
     font-size: 1.5rem;
+    padding: 30px;
+    margin: 20px;
   }
 
   .classified {
@@ -422,6 +424,11 @@ a:visited {
   .navbar {
     width: auto;
     height: 50px;
+  }
+
+  .projectList li {
+    padding: 80px;
+    margin: 15px;
   }
 
   .name {
@@ -503,5 +510,10 @@ a:visited {
   .projectList {
     display: block;
     width: 100%;
+  }
+
+  .projectList li {
+    padding: 30px;
+    margin: 50px;
   }
 }
